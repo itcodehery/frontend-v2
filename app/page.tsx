@@ -3,6 +3,7 @@ export const metadata = {
   description: 'Join a vibrant community of travelers sharing stories, photos and experiences on the Hive Blockchain',
 };
 
+import Link from 'next/link';
 import GradientText from '../components/home/GradientText';
 import FeatureCard from '../components/home/FeatureCard';
 import ShowcaseCard from '../components/home/ShowcaseCard';
@@ -147,26 +148,26 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left Column: Map Image */}
-            <div className="relative w-full aspect-[4/3] bg-[#F4F1EE] rounded-2xl overflow-hidden border-4 border-[#FDF6E3] shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-500">
-              <img
-                src="/images/map-preview.png"
-                alt="Interactive world map showing travel pins from community members"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+            <div className="relative w-full aspect-[4/3] bg-[#F4F1EE] rounded-2xl overflow-hidden border-4 border-[#FDF6E3] shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-500 cursor-pointer">
+              <Link href="/map">
+                <img
+                  src="/images/map-preview.png"
+                  alt="Interactive world map showing travel pins from community members"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </Link>
             </div>
 
-            {/* Right Column: Placeholder Text */}
-            <div className="flex flex-col items-center justify-center text-center space-y-4">
+            {/* Right Column: Text Content */}
+            <div className="flex flex-col items-center justify-center text-center space-y-6">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-lexend text-[#8B3A3A] leading-tight">
-                Map Preview
+                Explore the World
                 <br />
-                Placeholder
+                One Pin at a Time
               </h2>
-              <p className="text-lg sm:text-xl font-lexend text-[#8B3A3A]/80 max-w-md">
-                This will be replaced with the
-                <br />
-                MapSection component
+              <p className="text-lg sm:text-xl font-lexend text-[#8B3A3A]/80 max-w-lg">
+                Navigate our interactive global map to discover hidden gems and travel stories from our community. From bustling cities to remote landscapes, visualize the journey of travelers worldwide.
               </p>
             </div>
           </div>
